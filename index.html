@@ -29,6 +29,9 @@
 
     <link rel="preconnect" href="https://cdnjs.cloudflare.com">
     <link rel="preconnect" href="https://cdn.jsdelivr.net">
+    <link rel="preload" as="image" href="images/Sameermainpic-1280.webp"
+        imagesrcset="images/Sameermainpic-768.webp 768w, images/Sameermainpic-1280.webp 1280w, images/Sameermainpic.webp 1536w"
+        imagesizes="100vw" fetchpriority="high" />
 
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
@@ -42,7 +45,7 @@
 <body>
     <header class="fixed top-0 left-0 w-full z-50 px-10 py-6 flex justify-between items-center" id="main-header">
         <div class="logo transition-all duration-500">
-            <img src="images/logo.PNG" alt="Sameer Beachfront logo"
+            <img src="images/logo.webp" alt="Sameer Beachfront logo"
                 class="h-16 md:h-20 w-auto object-contain transition-all duration-500" />
         </div>
         <div class="header-right flex items-center space-x-8">
@@ -61,8 +64,10 @@
         <div id="smooth-content">
             <section id="home" class="h-screen relative flex items-center justify-center overflow-hidden">
                 <div class="absolute inset-0 z-0">
-                    <img src="./images/Sameermainpic.webp" class="w-full h-full object-cover parallax-bg scale-110"
-                        alt="Villa Exterior" />
+                    <img src="images/Sameermainpic-1280.webp"
+                        srcset="images/Sameermainpic-768.webp 768w, images/Sameermainpic-1280.webp 1280w, images/Sameermainpic.webp 1536w"
+                        sizes="100vw" fetchpriority="high" loading="eager" decoding="async" width="1536" height="1024"
+                        class="w-full h-full object-cover parallax-bg scale-110" alt="Villa Exterior" />
                     <div class="absolute inset-0 bg-black/50"></div>
                 </div>
                 <div class="relative z-10 text-center text-white px-4">
@@ -686,7 +691,7 @@
                 <div class="max-w-7xl mx-auto">
                     <div class="footer-grid grid grid-cols-1 gap-20 mb-16 reveal">
                         <div class="footer-intro">
-                            <img src="images/logo.PNG" alt="Sameer Beachfront logo"
+                            <img src="images/logo.webp" alt="Sameer Beachfront logo"
                                 class="h-20 w-auto object-contain mb-8 opacity-90" />
                             <h2 class="text-7xl font-serif mb-10 leading-tight">
                                 Ready for your<br /><i class="text-[#D4AF37]">escape?</i>
@@ -749,17 +754,17 @@
         </div>
     </div>
 
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-    <script src="script.min.js"></script>
+    <script defer src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script defer src="script.min.js"></script>
 
     <div id="booking-modal" class="booking-modal-overlay">
         <div class="booking-modal-content">
             <button class="close-modal" id="close-booking-modal">&times;</button>
             <div class="flex justify-center mb-6">
-                <img src="images/logo.PNG" alt="Sameer Beachfront logo" class="h-16 w-auto object-contain" />
+                <img src="images/logo.webp" alt="Sameer Beachfront logo" class="h-16 w-auto object-contain" />
             </div>
             <h3 class="font-serif text-4xl mb-6 leading-tight">Book Your Beachfront Escape Today</h3>
             <p class="opacity-70 text-sm mb-10 tracking-widest uppercase">Start your journey with us</p>
